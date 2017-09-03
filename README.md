@@ -4,8 +4,8 @@
 常用的增删改查，分页，排序
 
 # 统一接口定义IDataContext
-
-``` 不带事务的方法接口如下
+### 不带事务的方法接口如下
+``` 
 插入一条数据  long Add<T>(T value)
 
 删除一条数据  int Delete<T>(object value)
@@ -33,8 +33,8 @@
 分页（指定查询条件和排序方式） IPager<T> GetPagesByQuery<T>(int pageIndex, int pageSize, IQuery query, IOrder order)
 
 ```
-
-```带事务的方法
+### 带事务的方法
+```
 long Add<T>(IBussinessContext context, T value)
 
 int Delete<T>(IBussinessContext context, object value)
